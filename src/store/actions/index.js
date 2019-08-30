@@ -1,0 +1,3 @@
+export {
+  userHasAuthenticated
+} from './app'

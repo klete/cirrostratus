@@ -1,0 +1,31 @@
+main.Login {
+  padding: 40px;
+  position: relative;
+}
+
+.Login .card-header {
+  color: white;
+  /* background-color: #277647; */
+  background-color: #b4cc4e;
+  /* background-color: #ffc600;
+  background-color: #853a76;
+  background-color: #4b0c3b; */
+}
+
+.Login .toast-header {
+  color: #4b0c3b;
+  /* background-color: #277647; */
+  background-color: #ffc600;
+  /* background-color: #ffc600;
+  background-color: #853a76;
+  background-color: #4b0c3b; */
+}
+
+.Login #loginFailedToast {
+  position: absolute;
+  top: 50px; 
+  right: 25px;
+}
+
+
+

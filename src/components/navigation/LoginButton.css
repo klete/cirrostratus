@@ -1,0 +1,25 @@
+.LoginButton.btn-primary, 
+.LoginButton.btn-primary.disabled, 
+.LoginButton.btn-primary:disabled {
+  color: #fff;
+  background-color: #4b0c3b;
+  border-color: #853a76;
+}
+
+.LoginButton.btn-primary:not(:disabled):not(.disabled).active, .LoginButton.btn-primary:not(:disabled):not(.disabled):active, .LoginButton.show>.btn-primary.dropdown-toggle {
+  color: #4b0c3b;
+  /* background-color: #277647; */
+  background-color: #ffc600;
+  /* background-color: #ffc600;
+  background-color: #853a76;
+  background-color: #4b0c3b; */
+  border-color: #ffc600;  
+}
+
+.LoginButton.btn-primary:not(:disabled):not(.disabled).active:focus, .LoginButton.btn-primary:not(:disabled):not(.disabled):active:focus, .LoginButton.show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.LoginButton.btn-primary.focus, .LoginButton.btn-primary:focus {
+  box-shadow: none
+}

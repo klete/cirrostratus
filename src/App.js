@@ -1,26 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+// import Auth from "@aws-amplify/auth";
+
+import Routes from './Routes';
+
+import { userHasAuthenticated } from './store/actions';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+
+  constructor(props) {
+    super(props);
+  
+    this.state = {
+      isAuthenticating: true,
+    };
+  }
+
+  async componentDidMount() {
+    // try {
+    //   await Auth.currentSession();
+    //   this.props.userHasAuthenticated(true);
+    // }
+    // catch(e) {
+    //   if (e !== 'No current user') {
+    //     alert(e);
+    //   }
+    // }
+  
+    this.setState({ isAuthenticating: false });
+  }
+  
+  render () {
+    return (
+      !this.state.isAuthenticating &&
+        <div className="App">
+          <Routes />    
+        </div> 
+    );
+  }
 }
 
-export default App;
+const mapDispatchToProps = dispatch => {
+  return {
+    userHasAuthenticated: (authenticated) => dispatch(userHasAuthenticated(authenticated)),    
+  };
+};
+
+export default connect(null, mapDispatchToProps)(App);
