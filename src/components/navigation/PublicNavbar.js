@@ -7,8 +7,6 @@ import { connect } from 'react-redux';
 import { userHasAuthenticated } from '../../store/actions';
 import { handleLogout } from '../../utils';
 
-// import './PublicNavbar.css';
-
 
 class PublicNavbar extends Component {
   render() {
@@ -20,13 +18,15 @@ class PublicNavbar extends Component {
           <Navbar expand="lg" fixed="top">
 
             <Navbar.Brand>
-              <Link to="/">CirroStratus</Link>
+              <Link to="/">AltoStratus</Link>
             </Navbar.Brand>
 
-            <Navbar.Toggle 
-              aria-controls="basic-navbar-nav" 
-              id="public-navbar"
-            />
+            {showLoginLink && 
+              <Navbar.Toggle 
+                aria-controls="basic-navbar-nav" 
+                id="public-navbar"
+              />
+            }            
 
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="navbar-nav ml-auto mt-lg-0">

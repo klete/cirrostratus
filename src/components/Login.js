@@ -70,7 +70,7 @@ const Login = props => {
                         data-test="input-username"
                         type="username" 
                         value={username}
-                        onChange={setUsername}
+                        onChange={evt => setUsername(evt.target.value)}
                       />
                     </FormGroup>
                     <FormGroup controlId="password">
@@ -79,7 +79,7 @@ const Login = props => {
                         data-test="input-password"
                         type="password" 
                         value={password}
-                        onChange={setPassword}
+                        onChange={evt => setPassword(evt.target.value)}
                       />
                     </FormGroup>
                     <LoginButton
